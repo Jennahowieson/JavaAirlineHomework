@@ -11,7 +11,7 @@ public class FlightTest {
      Pilot pilot;
      Pilot pilot2;
      ArrayList<CabinCrew> cabinCrewList;
-     ArrayList<Passenger> passengerList;
+     ArrayList<Object> passengerList;
      Plane plane;
      Plane jet;
      int flightNumber;
@@ -35,7 +35,7 @@ public class FlightTest {
         passenger2 = new Passenger("Stewart", 1);
         passenger3 = new Passenger("Connor", 3);
         cabinCrewList = new ArrayList<CabinCrew>();
-        passengerList = new ArrayList<Passenger>();
+        passengerList = new ArrayList<Object>();
         plane = new Plane(PlaneType.BOEING747);
         jet = new Plane(PlaneType.PRIVATEJET);
         flight = new Flight(pilot, cabinCrewList, passengerList, plane,2709, "LGW", "EDI", "20;00");

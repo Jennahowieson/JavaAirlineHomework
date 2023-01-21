@@ -1,6 +1,14 @@
+import java.util.Iterator;
+
 public class FlightManager {
 
-    public FlightManager() {
+    Flight flight;
+    double baggageWeightInUse;
+    double baggageWeightRemaining;
+
+    public FlightManager(Flight flight) {
+        this.flight = flight;
+    }
 
 //        Each passenger bag weighs the same - 30
 //        Planes reserve half of their total weight for passenger bags
@@ -8,21 +16,29 @@ public class FlightManager {
 
 
         public double calculateBaggageWeightToReserve() {
-
+        double baggageWeightToReserve = ((flight.getPlane().getPlaneType().getTotalWeight())/2);
+        return baggageWeightToReserve;
         }
 
         public double calculateBaggageWeightInUse() {
+            int bagsCount = 0;
+            Iterator itr=flight.getPassengerList().iterator();
+            while(itr.hasNext()){
+                Passenger passenger=(Passenger) itr.next();
+                bagsCount+=(passenger.getBags());
+            }
+            return bagsCount*30;}
 
-        }
 
-        public double calculateBaggageWeightRemaining() {
+//        int numberOfBagsOnPlane = flight.getPassengerList().size();
+//        baggageWeightInUse = calculateBaggageWeightToReserve()
+//
+//        }
+//
+//        public double calculateBaggageWeightRemaining() {
+//
+//        }
 
-        }
-    }
 
-
-* calculate how much baggage weight should be reserved for each passenger for a flight
-* calculate how much baggage weight is booked by passengers of a flight
-* calculate how much overall weight reserved for baggage remains for a flight
 
 }

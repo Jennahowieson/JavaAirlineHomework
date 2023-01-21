@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Flight {
     private Pilot pilot;
     private ArrayList<CabinCrew> cabinCrewList;
-    private ArrayList<Passenger> passengerList;
+    private ArrayList<Object> passengerList;
     private Plane plane;
     private int flightNumber;
     private String destination;
@@ -11,7 +11,7 @@ public class Flight {
     private String timeOfDeparture;
     private CabinCrew cabinCrew;
 
-    public Flight (Pilot pilot, ArrayList<CabinCrew> cabinCrewList,ArrayList<Passenger> passengerList, Plane plane, int flightNumber, String destination, String departingAirport, String timeOfDeparture ){
+    public Flight (Pilot pilot, ArrayList<CabinCrew> cabinCrewList, ArrayList<Object> passengerList, Plane plane, int flightNumber, String destination, String departingAirport, String timeOfDeparture ){
         this.pilot = pilot;
         this.cabinCrewList = cabinCrewList;
         this.passengerList = passengerList;
@@ -38,11 +38,11 @@ public class Flight {
         this.cabinCrewList = cabinCrewList;
     }
 
-    public ArrayList<Passenger> getPassengerList() {
+    public ArrayList<Object> getPassengerList() {
         return passengerList;
     }
 
-    public void setPassengerList(ArrayList<Passenger> passengerList) {
+    public void setPassengerList(ArrayList<Object> passengerList) {
         this.passengerList = passengerList;
     }
 
