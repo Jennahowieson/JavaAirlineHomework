@@ -1,3 +1,8 @@
+package Flight;
+
+import Flight.Flight;
+import People.Passenger;
+
 import java.util.Iterator;
 
 public class FlightManager {
@@ -27,13 +32,10 @@ public class FlightManager {
                 Passenger passenger=(Passenger) itr.next();
                 bagsCount+=(passenger.getBags());
             }
-            return bagsCount*30;}
+            return bagsCount*30;
+            }
 
 
-//        int numberOfBagsOnPlane = flight.getPassengerList().size();
-//        baggageWeightInUse = calculateBaggageWeightToReserve()
-//
-//        }
 //
 //        public double calculateBaggageWeightRemaining() {
 //

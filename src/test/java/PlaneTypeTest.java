@@ -1,7 +1,10 @@
+import Flight.Plane;
+import Flight.PlaneType;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+
 public class PlaneTypeTest {
 
     Plane plane;

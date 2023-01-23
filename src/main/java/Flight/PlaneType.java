@@ -1,3 +1,5 @@
+package Flight;
+
 public enum PlaneType {
     BOEING747(20),
     PRIVATEJET (2);

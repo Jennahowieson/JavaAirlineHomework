@@ -1,9 +1,17 @@
+import Flight.Flight;
+import Flight.FlightManager;
+import Flight.Plane;
+import Flight.PlaneType;
+import People.CabinCrew;
+import People.Passenger;
+import People.Pilot;
+import People.Rank;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class FlightManagerTest {
     FlightManager flightManager;

@@ -1,3 +1,9 @@
+package Flight;
+
+import People.CabinCrew;
+import People.Passenger;
+import People.Pilot;
+
 import java.util.ArrayList;
 
 public class Flight {

@@ -1,7 +1,7 @@
+import People.Pilot;
+import People.Rank;
 import org.junit.Before;
 import org.junit.Test;
-
-import javax.swing.*;
 
 import static org.junit.Assert.*;
 

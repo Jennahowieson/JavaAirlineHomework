@@ -1,3 +1,5 @@
+package People;
+
 public class Pilot {
     private String name;
     private Rank rank;

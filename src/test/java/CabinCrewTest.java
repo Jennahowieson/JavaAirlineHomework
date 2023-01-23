@@ -1,3 +1,5 @@
+import People.CabinCrew;
+import People.Rank;
 import org.junit.Before;
 import org.junit.Test;
 

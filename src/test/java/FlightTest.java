@@ -1,3 +1,10 @@
+import Flight.Flight;
+import People.CabinCrew;
+import People.Passenger;
+import People.Pilot;
+import Flight.Plane;
+import Flight.PlaneType;
+import People.Rank;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -38,7 +45,7 @@ public class FlightTest {
         passengerList = new ArrayList<Object>();
         plane = new Plane(PlaneType.BOEING747);
         jet = new Plane(PlaneType.PRIVATEJET);
-        flight = new Flight(pilot, cabinCrewList, passengerList, plane,2709, "LGW", "EDI", "20;00");
+        flight = new Flight(pilot, cabinCrewList, passengerList, plane,2709, "LGW", "EDI", "20:00");
     }
 
     @Test
@@ -68,42 +75,58 @@ public class FlightTest {
 
     @Test
     public void canGetPlane() {
+        assertEquals(plane, flight.getPlane());
     }
 
     @Test
     public void canSetPlane() {
+        flight.setPlane(jet);
+        assertEquals(jet, flight.getPlane());
     }
+
 
     @Test
     public void canGetFlightNumber() {
+        assertEquals(2709, flight.getFlightNumber());
     }
 
     @Test
     public void canSetFlightNumber() {
+        flight.setFlightNumber(2780);
+        assertEquals(2780, flight.getFlightNumber());
     }
 
     @Test
     public void canGetDestination() {
+        assertEquals("LGW", flight.getDestination());
     }
 
     @Test
     public void canSetDestination() {
+        flight.setDestination("LHR");
+        assertEquals("LHR", flight.getDestination());
     }
 
     @Test
     public void canGetDepartingAirport() {
+        assertEquals("EDI", flight.getDepartingAirport());
     }
 
     @Test
     public void canSetDepartingAirport() {
+        flight.setDepartingAirport("GLA");
+        assertEquals("GLA", flight.getDepartingAirport());
     }
 
     @Test
     public void canGetTimeOfDeparture() {
+        assertEquals("20:00", flight.getTimeOfDeparture());
     }
 
     @Test
     public void canSetTimeOfDeparture() {
+        flight.setTimeOfDeparture("20:30");
+        assertEquals("20:30", flight.getTimeOfDeparture());
     }
 
     @Test

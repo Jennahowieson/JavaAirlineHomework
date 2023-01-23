@@ -1,3 +1,5 @@
+package Flight;
+
 public class Plane {
     private PlaneType planeType;
 
@@ -12,4 +14,6 @@ public class Plane {
     public void setPlaneType(PlaneType planeType) {
         this.planeType = planeType;
     }
+
+
 }
